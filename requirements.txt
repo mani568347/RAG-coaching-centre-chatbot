@@ -1,0 +1,24 @@
+# --- PDF parsing ---
+docling>=2.0.0
+pdfplumber>=0.11.0
+
+# --- Embeddings + LLM (Gemini) ---
+google-genai>=1.0.0
+python-dotenv>=1.0.0
+
+# --- Vector database (persistent local) ---
+chromadb>=0.5.0
+
+# --- Keyword retrieval (BM25) ---
+rank_bm25>=0.2.2
+
+# --- Reranker: BAAI/bge-reranker-v2-m3 (loaded via transformers) ---
+# torch is large; on this machine it was already installed system-wide.
+# If torch/transformers are missing, install:
+torch
+transformers>=4.45.0
+sentencepiece
+protobuf
+
+# --- UI ---
+streamlit>=1.35.0

@@ -1,0 +1,20 @@
+# Secrets - never commit
+.env
+
+# Virtual environment
+venv/
+
+# Local vector database (rebuilt with `python ingest.py`)
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Evaluation report artifacts
+eval/results_*.json
+eval/retrieval_ab_*.json

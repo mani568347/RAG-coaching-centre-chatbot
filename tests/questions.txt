@@ -1,0 +1,17 @@
+# Smoke tests. Lines 10-12 are deliberately awkward phrasings (a course named
+# without "fee", a code-mixed question) — they are the ones that exposed rerank
+# thresholds high enough to be "confidence gates" refusing valid questions.
+# The last question must be refused.
+What is the AI and ML course fee?
+How long is the Full Stack Web Development course?
+What topics are covered in Data Science?
+What are the evening batch timings?
+Who teaches AI and Machine Learning?
+Does the academy provide project mentoring?
+What documents are required for admission?
+What is the refund policy?
+How much do I need to pay for the AI course?
+Who teaches Data Science?
+full stack fee kitna hai
+How much is AI and ML?
+What is the Java course fee?
