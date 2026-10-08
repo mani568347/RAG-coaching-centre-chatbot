@@ -104,6 +104,10 @@ rag-coaching-chatbot/
 Requires **Python 3.10+** and a Google AI Studio API key.
 
 ```bash
+# 0) clone the repository, then enter it
+git clone <your-repository-url>.git RAG_chatbot
+cd RAG_chatbot
+
 # 1) create and activate a virtual environment
 python -m venv venv
 ```
@@ -181,7 +185,11 @@ re-creates embeddings — it only opens the existing database.
 ## 7. Chroma database
 
 Chroma runs fully locally (`chromadb.PersistentClient`) — the embeddings live
-in `data/chroma_db/` on disk and survive application restarts. The collection
+in `data/chroma_db/` on disk and survive application restarts. **This database
+and `data/bm25_index.pkl` are generated locally by `python ingest.py`; they are
+build artifacts, not source, and are never committed** (the whole `data/` tree
+is in `.gitignore`). A fresh clone therefore contains no index until you run
+ingestion once. The collection
 `codecraft_chunks` holds **24 chunks from the 5 PDFs** and stores, per chunk:
 the contextualized text, the 768-d Gemini vector, and metadata (real values,
 taken verbatim from the ingested collection):
